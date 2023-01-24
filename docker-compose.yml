@@ -6,9 +6,9 @@ services:
       - "3306:3306"
     environment:
       - MYSQL_DATABASE=foot_club
-      - MYSQL_ROOT_PASSWORD=admin
-      - MYSQL_USER=user
-      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
     command:
       - --table_definition_cache=100
       - --performance_schema=0
