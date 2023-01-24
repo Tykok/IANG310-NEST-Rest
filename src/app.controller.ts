@@ -1,12 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { ClubService } from './club/club.service';
+import { Club } from './entity/Club';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private clubService: ClubService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getClub(): Promise<Club[]> {
+    return this.clubService.getAllClub();
   }
 }
